@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import '../styles/liquidBackground.css';
 
 class Circle {
@@ -50,13 +51,13 @@ class Circle {
 }
 
 const generateRandomPosition = (size: number) => {
-    let randX = Math.random() * window.innerWidth - size;
-    let randY = Math.random() * window.innerHeight - size;
+    const randX = Math.random() * window.innerWidth - size;
+    const randY = Math.random() * window.innerHeight - size;
     return [randX, randY];
 }
 
 const randomSpeed = () => {
-    return (Math.random() + 3);
+    return (Math.random() + 2);
 }
 
 const randomDirection = () => {
@@ -77,13 +78,16 @@ const initCircles = () => {
         })
         requestAnimationFrame(update);
     }
-    
+
     requestAnimationFrame(update)
 }
 
-initCircles();
-
 const LiquidBackground: React.FC = () => {
+
+    useEffect(() => {
+        initCircles();
+    }, [])
+
     return (
         <>
             <div className="backgroundContainer">

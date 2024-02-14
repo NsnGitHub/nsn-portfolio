@@ -9,8 +9,11 @@ function App() {
       <LiquidBackground></LiquidBackground>
       <div className="center">
         <h1>
-          YAG
+          Hi, I'm Anson
         </h1>
+        <p>
+          I turn caffiene into software
+        </p>
       </div>
     </>
   );

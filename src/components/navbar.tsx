@@ -8,26 +8,26 @@ const Navbar: React.FC = () => {
         <nav className="navbar">
             <div className="navContainer">
                 <div className="navButton">
-                    <div>Logo</div>
+                    <div className="navText">Logo</div>
                     <div className="underline"></div>
                 </div>
                 <div className="navButton">
-                    <div>About</div>
+                    <div className="navText">About</div>
                     <div className="underline"></div>
                 </div>
                 <div className="navButton">
-                    <div>Projects</div>
+                    <div className="navText">Projects</div>
                     <div className="underline"></div>
                 </div>
             </div>
             <div className="navContainer">
                 <div className="contact">
                     <div className="contactIcons navButtonText">
-                        <span><img src={email_logo} alt="Email logo"/></span>
-                        <span><img src={linkedin_logo} alt="LinkedIn logo"/></span>
-                        <span><img src={github_logo} alt="GitHub logo"/></span>
+                        <span><img src={email_logo} alt="Email logo" /></span>
+                        <span><img src={linkedin_logo} alt="LinkedIn logo" /></span>
+                        <span><img src={github_logo} alt="GitHub logo" /></span>
                     </div>
-                    <div>Contact</div>
+                    <div className="navText">Contact</div>
                 </div>
             </div>
         </nav>
