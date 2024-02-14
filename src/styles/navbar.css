@@ -20,8 +20,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 1px solid black;
-    background-color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.035);
     z-index: 10;
 }
 
@@ -29,12 +28,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    --iconGap: 2.25rem;
+    --iconGap: 2rem;
     gap: var(--iconGap);
 }
 
 .contact:hover {
-    pointer-events: all;
+    cursor: pointer;
 }
 
 .contactIcons {
@@ -66,8 +65,8 @@
 }
 
 img {
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 2rem;
+    height: 2rem;
     padding: 0;
     margin: 0;
     display: block;
@@ -91,12 +90,16 @@ span:hover img {
     background: linear-gradient(to right, #f9abe7, #d1bbf9, #b5e5ff);
 }
 
+.navButton:hover {
+    cursor: pointer;
+}
+
 .navButton:hover .underline {
     width: 100%;
 }
 
 .navText {
-    font-size: 2.25rem;
+    font-size: 2rem;
 }
 
 h1 {
