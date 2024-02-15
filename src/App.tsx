@@ -11,8 +11,8 @@ function App() {
         <h1>
           Hi, I'm Anson
         </h1>
-        <p>
-          I turn caffiene into software
+        <p className="introText">
+          I'm a Computing Science student at Simon Fraser University who specializes in turning caffiene into software
         </p>
       </div>
     </>

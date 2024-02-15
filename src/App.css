@@ -18,5 +18,10 @@
 }
 
 .center p {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.introText {
+    width: 50ch;
+    line-height: 1.6;
 }
