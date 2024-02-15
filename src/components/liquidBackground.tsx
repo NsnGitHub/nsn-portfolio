@@ -12,7 +12,18 @@ class Circle {
 
     constructor(element: HTMLElement) {
         this.element = element;
-        this.size = element.getBoundingClientRect().width;
+
+        const circleSize = getCircleSize();
+
+        if (this.element.classList[1] == 'white') {
+            this.element.style.width = `${Math.floor(circleSize * 0.7)}px`;
+            this.element.style.height = `${Math.floor(circleSize * 0.7)}px`;
+        } else {
+            this.element.style.width = `${circleSize}px`;
+            this.element.style.height = `${circleSize}px`;
+        }
+        this.size = circleSize;
+
         this.position = generateRandomPosition(this.size);
         this.x = this.position[0];
         this.y = this.position[1];
@@ -50,9 +61,15 @@ class Circle {
     }
 }
 
-const generateRandomPosition = (size: number) => {
-    const randX = Math.random() * window.innerWidth - size;
-    const randY = Math.random() * window.innerHeight - size;
+const getCircleSize = () => {
+    const windowSize = window.innerWidth;
+    const circleWidth = Math.floor(windowSize / 4);
+    return circleWidth;
+}
+
+const generateRandomPosition = (sizeOfCircle: number) => {
+    const randX = Math.random() * window.innerWidth - sizeOfCircle;
+    const randY = Math.random() * window.innerHeight - sizeOfCircle;
     return [randX, randY];
 }
 
@@ -66,7 +83,6 @@ const randomDirection = () => {
 
 const initCircles = () => {
     const circles: NodeListOf<HTMLElement> = document.querySelectorAll('.circle');
-    console.log(circles);
     const circlesArray: Circle[] = Array.from(circles).map(circle => {
         return new Circle(circle);
     });

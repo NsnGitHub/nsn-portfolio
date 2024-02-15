@@ -8,12 +8,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 3em;
+    gap: 4rem;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 1.25rem;
     padding-bottom: 1rem;
-    height: 6rem;
+    height: 4rem;
 }
 
 .navbar {
@@ -28,12 +28,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    --iconGap: 2rem;
+    --iconGap: 3rem;
     gap: var(--iconGap);
-}
-
-.contact:hover {
-    cursor: pointer;
 }
 
 .contactIcons {
@@ -73,9 +69,12 @@ img {
     transition: 100ms ease-in-out;
 }
 
-span:hover img {
+span:hover {
     cursor: pointer;
-    transform: translateY(-5px);
+}
+
+span:hover img {
+    transform: translateY(-7px);
 }
 
 .navButton {
@@ -90,7 +89,7 @@ span:hover img {
     background: linear-gradient(to right, #f9abe7, #d1bbf9, #b5e5ff);
 }
 
-.navButton:hover {
+.navText:hover {
     cursor: pointer;
 }
 
@@ -99,13 +98,40 @@ span:hover img {
 }
 
 .navText {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
-h1 {
-    font-size: 10rem;
+svg {
+    height: 4rem;
+    width: 4rem;
 }
 
-p {
-    font-size: 3rem;
+svg:hover {
+    cursor: pointer;
+}
+
+svg:hover #blue1 {
+    transform: translateX(20%);
+}
+
+svg:hover #purple1 {
+    transform: translateX(40%);
+    opacity: 0;
+}
+
+svg:hover #purple2 {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+
+#purple1,
+#purple2,
+#blue1 {
+    transition: all 1s ease;
+}
+
+#purple2 {
+    transform: translateX(-100%);
+    opacity: 0;
 }
