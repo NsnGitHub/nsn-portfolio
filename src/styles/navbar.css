@@ -85,6 +85,7 @@ span:hover img {
 .underline {
     width: 0%;
     height: 0.25rem;
+    border-radius: 7px;
     transition: 250ms ease-out;
     background: linear-gradient(to right, #f9abe7, #d1bbf9, #b5e5ff);
 }
