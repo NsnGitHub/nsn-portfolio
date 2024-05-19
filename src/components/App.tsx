@@ -1,4 +1,5 @@
 import "../styles/App.css";
+
 import LiquidBackgroundV2 from "./LiquidBackground-v2";
 import Navbar from "./Navbar";
 
