@@ -1,5 +1,5 @@
 import "../styles/App.css";
-import LiquidBackgroundV2 from "./liquidBackground-v2";
+import LiquidBackgroundV2 from "./LiquidBackground-v2";
 import Navbar from "./Navbar";
 
 function App() {
