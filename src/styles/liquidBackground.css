@@ -1,43 +1,43 @@
 .backgroundContainer {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .blurEffect {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    filter: blur(120px);
-    z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(0px);
+  z-index: 3;
 }
 
 .blue {
-    background-color: #B5E5FF;
+  background-color: #b5e5ff;
 }
 
 .pink {
-    background-color: #F9ABE7;
+  background-color: #f9abe7;
 }
 
 .purple {
-    background-color: #D1BBF9;
+  background-color: #d1bbf9;
 }
 
 .white {
-    background-color: #FFFFFF;
-    z-index: 2;
+  background-color: #ffffff;
+  z-index: 2;
 }
