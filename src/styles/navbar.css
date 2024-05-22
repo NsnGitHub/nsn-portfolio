@@ -1,138 +1,27 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.navContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
-    height: 4rem;
-}
-
 .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.035);
-    z-index: 10;
+  height: 5rem;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
-.contact {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    --iconGap: 3rem;
-    gap: var(--iconGap);
+.navbar__list {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  height: 100%;
+  padding: 0rem 3rem;
 }
 
-.contactIcons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--iconGap)
+.navbar__contact {
+  margin-left: auto;
 }
 
-.contactIcons span {
-    opacity: 0;
-    transition: 500ms ease-in-out;
+.navbar li:not(.navbar__contact) {
+  transition: all 0.25s ease;
 }
 
-.contact:hover .contactIcons span {
-    opacity: 100;
-}
-
-.contact:hover span:nth-child(3) {
-    transition-delay: 100ms;
-}
-
-.contact:hover span:nth-child(2) {
-    transition-delay: 200ms;
-}
-
-.contact:hover span:nth-child(1) {
-    transition-delay: 300ms;
-}
-
-img {
-    width: 2rem;
-    height: 2rem;
-    padding: 0;
-    margin: 0;
-    display: block;
-    transition: 100ms ease-in-out;
-}
-
-span:hover {
-    cursor: pointer;
-}
-
-span:hover img {
-    transform: translateY(-7px);
-}
-
-.navButton {
-    display: flex;
-    flex-direction: column;
-}
-
-.underline {
-    width: 0%;
-    height: 0.25rem;
-    border-radius: 7px;
-    transition: 250ms ease-out;
-    background: linear-gradient(to right, #f9abe7, #d1bbf9, #b5e5ff);
-}
-
-.navText:hover {
-    cursor: pointer;
-}
-
-.navButton:hover .underline {
-    width: 100%;
-}
-
-.navText {
-    font-size: 1.5rem;
-}
-
-svg {
-    height: 4rem;
-    width: 4rem;
-}
-
-svg:hover {
-    cursor: pointer;
-}
-
-svg:hover #blue1 {
-    transform: translateX(20%);
-}
-
-svg:hover #purple1 {
-    transform: translateX(40%);
-    opacity: 0;
-}
-
-svg:hover #purple2 {
-    transform: translateX(0%);
-    opacity: 1;
-}
-
-
-#purple1,
-#purple2,
-#blue1 {
-    transition: all 1s ease;
-}
-
-#purple2 {
-    transform: translateX(-100%);
-    opacity: 0;
+.navbar li:not(.navbar__contact):hover {
+  cursor: pointer;
+  transform: scale(1.15);
 }

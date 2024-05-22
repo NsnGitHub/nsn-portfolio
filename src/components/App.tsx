@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 function App() {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <LiquidBackgroundV2 />
       <div className="center">
         <h1>Hi there,</h1>
