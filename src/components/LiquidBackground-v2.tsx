@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import "../styles/liquidBackground.css";
+import "../styles/LiquidBackground.css";
+import { useThemeContext } from "../hooks/useTheme";
 
 type Position = {
   x: number;
@@ -27,13 +28,14 @@ const generateRandomPosition = (sizeOfCircle: number) => {
 };
 
 const randomSpeedAndDirection = () => {
-  const randomSpeed = Math.random() + 2;
+  const randomSpeed = Math.random() + 1.5;
   const randomDirection = Math.random() > 0.5 ? 1 : -1;
   return randomSpeed * randomDirection;
 };
 
 export default function LiquidBackgroundV2() {
   const [circles, setCircles] = useState<Circle[]>([]);
+  const { theme } = useThemeContext();
 
   useEffect(() => {
     const initCircles = () => {
@@ -95,15 +97,17 @@ export default function LiquidBackgroundV2() {
   }, []);
 
   return (
-    <div className="backgroundContainer">
-      <div className="blurEffect">
+    <div className={`lqb__container ${theme === "light" ? "lqb--light" : "lqb--dark"}`}>
+      <div className="lqb__blurFilter">
         {circles.map((circle, index) => (
           <div
             key={index}
-            className={`circle ${
+            className={`lqb__circle ${
               // Conditions to get 2 blue, 2 purple, 2 pink circles in 7 circles total
               index === 0
-                ? "white"
+                ? theme === "light"
+                  ? "light"
+                  : "dark"
                 : // purples
                 index % 3 === 0
                 ? "purple"

@@ -1,0 +1,38 @@
+.logo {
+  height: 4rem;
+  width: 4rem;
+}
+
+.logo > svg {
+  height: 4rem;
+  width: 4rem;
+}
+
+.logo > svg:hover {
+  cursor: pointer;
+}
+
+.logo > svg:hover #blue1 {
+  transform: translateX(20%);
+}
+
+.logo > svg:hover #purple1 {
+  transform: translateX(40%);
+  opacity: 0;
+}
+
+.logo > svg:hover #purple2 {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+#purple1,
+#purple2,
+#blue1 {
+  transition: all 0.75s ease;
+}
+
+#purple2 {
+  transform: translateX(-100%);
+  opacity: 0;
+}
