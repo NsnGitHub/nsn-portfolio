@@ -2,6 +2,7 @@
   height: 5rem;
   font-size: 1rem;
   font-weight: 700;
+  background-color: transparent !important;
 }
 
 .navbar__list {
@@ -13,15 +14,26 @@
   padding: 0rem 3rem;
 }
 
-.navbar__contact {
+.navbar__contact-settings {
   margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
 }
 
-.navbar li:not(.navbar__contact) {
-  transition: all 0.25s ease;
+.navbar li:not(.navbar__contact-settings) {
+  transition: all 0.2s ease;
 }
 
-.navbar li:not(.navbar__contact):hover {
+.navbar li:not(.navbar__contact-settings):hover {
   cursor: pointer;
   transform: scale(1.15);
+}
+
+.navbar--light {
+  color: #000;
+}
+
+.navbar--dark {
+  color: #fff;
 }

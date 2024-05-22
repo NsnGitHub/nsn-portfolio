@@ -4,3 +4,7 @@
   align-items: center;
   gap: 3rem;
 }
+
+.contact__list li {
+  cursor: pointer;
+}

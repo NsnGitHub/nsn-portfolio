@@ -97,7 +97,7 @@ export default function LiquidBackgroundV2() {
   }, []);
 
   return (
-    <div className="lqb__container">
+    <div className={`lqb__container ${theme === "light" ? "lqb--light" : "lqb--dark"}`}>
       <div className="lqb__blurFilter">
         {circles.map((circle, index) => (
           <div
