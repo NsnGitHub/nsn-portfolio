@@ -5,13 +5,23 @@ export default function Contact() {
   return (
     <ul className="contact__list">
       <li>
-        <EnvelopeClosedIcon height="1.5rem" width="1.5rem" />
+        <span
+          onClick={() => {
+            navigator.clipboard.writeText("awc28@sfu.ca");
+          }}
+        >
+          <EnvelopeClosedIcon height="1.5rem" width="1.5rem" />
+        </span>
       </li>
       <li>
-        <LinkedInLogoIcon height="1.5rem" width="1.5rem" />
+        <a href="https://www.linkedin.com/in/ansonwmchan/" target="_blank">
+          <LinkedInLogoIcon height="1.5rem" width="1.5rem" />
+        </a>
       </li>
       <li>
-        <GitHubLogoIcon height="1.5rem" width="1.5rem" />
+        <a href="https://github.com/NsnGitHub" target="_blank">
+          <GitHubLogoIcon height="1.5rem" width="1.5rem" />
+        </a>
       </li>
     </ul>
   );
