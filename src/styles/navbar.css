@@ -12,6 +12,8 @@
   align-items: center;
   height: 100%;
   padding: 0rem 3rem;
+
+  user-select: none;
 }
 
 .navbar__contact-settings {
@@ -30,10 +32,26 @@
   transform: scale(1.15);
 }
 
+.navbar li:not(.navbar__contact-settings):active {
+  transform: scale(1.05);
+}
+
 .navbar--light {
   color: #000;
 }
 
 .navbar--dark {
   color: #fff;
+}
+
+@media (max-width: 925px) {
+  .navbar__contact {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar__logo {
+    display: none;
+  }
 }

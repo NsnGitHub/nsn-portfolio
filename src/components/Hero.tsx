@@ -12,11 +12,14 @@ export default function Hero() {
       <main className={`hero ${theme === "light" ? "hero--light" : "hero--dark"}`}>
         <h1>Hi there, I'm Anson.</h1>
         <p>
-          Formerly a business student with dreams of conquering the accounting world... but decided to build cool
-          applications instead. Currently a fourth-year student studying Computing Science @ Simon Fraser University.
+          Was once a business student aspiring to excel in accounting. But then decided to build cool and impactful
+          applications with code instead. Currently a fourth-year student studying Computing Science @ Simon Fraser
+          University.
         </p>
         <Contact />
-        <button className="hero__button">Check out my projects</button>
+        <button className={`hero__button ${theme === "light" ? "hero__button--light" : "hero__button--dark"}`}>
+          Check out my projects
+        </button>
       </main>
     </>
   );

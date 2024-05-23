@@ -17,7 +17,9 @@ export default function Navbar() {
         <li>Projects</li>
         <li>Resume</li>
         <li className="navbar__contact-settings">
-          <Contact />
+          <span className="navbar__contact">
+            <Contact />
+          </span>
           <Settings />
         </li>
       </ul>

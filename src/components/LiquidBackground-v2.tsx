@@ -18,6 +18,11 @@ type Circle = {
 const getCircleSize = () => {
   const windowSize = window.innerWidth;
   const circleWidth = Math.floor(windowSize / 4);
+
+  if (circleWidth < 175) {
+    return 175;
+  }
+
   return circleWidth;
 };
 
@@ -28,7 +33,7 @@ const generateRandomPosition = (sizeOfCircle: number) => {
 };
 
 const randomSpeedAndDirection = () => {
-  const randomSpeed = Math.random() + 1.5;
+  const randomSpeed = Math.random() + 0.65;
   const randomDirection = Math.random() > 0.5 ? 1 : -1;
   return randomSpeed * randomDirection;
 };
@@ -98,7 +103,7 @@ export default function LiquidBackgroundV2() {
 
   return (
     <div className={`lqb__container ${theme === "light" ? "lqb--light" : "lqb--dark"}`}>
-      <div className="lqb__blurFilter">
+      <div className={`lqb__blurFilter ${theme === "light" ? "lqb__blurFilter--light" : "lqb__blurFilter--dark"}`}>
         {circles.map((circle, index) => (
           <div
             key={index}
@@ -106,15 +111,15 @@ export default function LiquidBackgroundV2() {
               // Conditions to get 2 blue, 2 purple, 2 pink circles in 7 circles total
               index === 0
                 ? theme === "light"
-                  ? "light"
-                  : "dark"
+                  ? "lqb__circle--light"
+                  : "lqb__circle--dark"
                 : // purples
                 index % 3 === 0
-                ? "purple"
+                ? "lqb__circle--purple"
                 : // pinks and blues
                 index % 3 === 1
-                ? "pink"
-                : "blue"
+                ? "lqb__circle--pink"
+                : "lqb__circle--blue"
             }`}
             style={{
               width: `${circle.size}px`,

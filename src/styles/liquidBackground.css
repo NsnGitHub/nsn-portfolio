@@ -21,28 +21,35 @@
   left: 0;
   width: 100%;
   height: 100%;
-  filter: blur(120px);
   z-index: 3;
 }
 
-.blue {
+.lqb__blurFilter--light {
+  filter: blur(120px);
+}
+
+.lqb__blurFilter--dark {
+  filter: blur(120px) brightness(85%);
+}
+
+.lqb__circle--blue {
   background-color: #b5e5ff;
 }
 
-.pink {
+.lqb__circle--pink {
   background-color: #f9abe7;
 }
 
-.purple {
+.lqb__circle--purple {
   background-color: #d1bbf9;
 }
 
-.light {
+.lqb__circle--light {
   background-color: #ffffff;
   z-index: 2;
 }
 
-.dark {
+.lqb__circle--dark {
   background-color: #121212;
 }
 
