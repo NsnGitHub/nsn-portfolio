@@ -1,0 +1,24 @@
+.modal {
+  background: #fff;
+  padding: 1.5rem 3.5rem;
+  width: fit-content;
+  border-radius: 500px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s;
+  transform: translateX(20rem);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal--visible {
+  transform: initial;
+  visibility: initial;
+  opacity: 1;
+}
