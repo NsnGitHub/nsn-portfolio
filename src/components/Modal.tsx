@@ -2,13 +2,13 @@ import "../styles/Modal.css";
 import { createPortal } from "react-dom";
 
 type ModalProps = {
-  modalText: string;
+  children: React.ReactNode;
   visible: boolean;
 };
 
-export default function Modal({ modalText, visible }: ModalProps) {
+export default function Modal({ children, visible }: ModalProps) {
   return createPortal(
-    <div className={`modal ${visible ? "modal--visible" : ""}`}>{modalText}</div>,
+    <div className={`modal ${visible ? "modal--visible" : ""}`}>{children}</div>,
     document.getElementById("root") || document.body
   );
 }

@@ -6,7 +6,7 @@ import Modal from "./Modal";
 export default function Contact() {
   const [showClipboardModal, setShowClipboardModal] = useState(false);
 
-  const displayModalFor2Seconds = () => {
+  const displayModalFor3Seconds = () => {
     if (showClipboardModal) {
       return;
     }
@@ -15,21 +15,23 @@ export default function Contact() {
 
     setTimeout(() => {
       setShowClipboardModal(false);
-    }, 2000);
+    }, 3000);
   };
 
   const handleEmailIconClick = () => {
     navigator.clipboard.writeText("awc28@sfu.ca");
-    displayModalFor2Seconds();
+    displayModalFor3Seconds();
   };
 
   return (
     <>
       <ul className="contact__list">
         <li>
+          {/* <a href="mailto:awc28@sfu.ca"> */}
           <span onClick={handleEmailIconClick}>
             <EnvelopeClosedIcon height="1.5rem" width="1.5rem" />
           </span>
+          {/* </a> */}
         </li>
         <li>
           <a href="https://www.linkedin.com/in/ansonwmchan/" target="_blank">
@@ -42,7 +44,10 @@ export default function Contact() {
           </a>
         </li>
       </ul>
-      <Modal modalText="Email copied to your clipboard!" visible={showClipboardModal} />
+      <Modal visible={showClipboardModal}>
+        <h4>Email copied!</h4>
+        <p>You can now paste it wherever you need.</p>
+      </Modal>
     </>
   );
 }

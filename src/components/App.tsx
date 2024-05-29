@@ -7,6 +7,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <div style={{ height: "100vh" }}>Hello</div>
     </>
   );
 }
