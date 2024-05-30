@@ -51,7 +51,12 @@
 }
 
 @media (max-width: 500px) {
-  .navbar__logo {
+  .navbar__list {
+    padding: 2rem;
+  }
+  .navbar__about,
+  .navbar__projects,
+  .navbar__resume {
     display: none;
   }
 }

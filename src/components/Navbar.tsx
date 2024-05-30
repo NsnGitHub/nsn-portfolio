@@ -13,9 +13,9 @@ export default function Navbar() {
         <li className="navbar__logo">
           <Logo />
         </li>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Resume</li>
+        <li className="navbar__about">About</li>
+        <li className="navbar__projects">Projects</li>
+        <li className="navbar__resume">Resume</li>
         <li className="navbar__contact-settings">
           <span className="navbar__contact">
             <Contact />
