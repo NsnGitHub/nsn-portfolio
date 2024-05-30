@@ -44,6 +44,7 @@ export default function Contact() {
           </a>
         </li>
       </ul>
+
       <Modal visible={showClipboardModal}>
         <h4>Email copied!</h4>
         <p>You can now paste it wherever you need.</p>

@@ -7,8 +7,5 @@ type ModalProps = {
 };
 
 export default function Modal({ children, visible }: ModalProps) {
-  return createPortal(
-    <div className={`modal ${visible ? "modal--visible" : ""}`}>{children}</div>,
-    document.getElementById("root") || document.body
-  );
+  return createPortal(<div className={`modal ${visible ? "modal--visible" : ""}`}>{children}</div>, document.body);
 }

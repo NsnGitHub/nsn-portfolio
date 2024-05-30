@@ -18,6 +18,7 @@
 
 .hero h1 {
   font-size: 4.5rem;
+  /* text-transform: uppercase; */
 }
 
 .hero p {
@@ -52,7 +53,7 @@
 .hero__button--dark {
   background-color: #c6c7ff;
   color: #000;
-  border: 1px solid black;
+  border: 1px solid #1e1f24;
 }
 
 @media (max-width: 1400px) {
