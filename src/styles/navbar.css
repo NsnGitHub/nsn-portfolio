@@ -36,14 +36,6 @@
   transform: scale(1.05);
 }
 
-.navbar--light {
-  color: #000;
-}
-
-.navbar--dark {
-  color: #fff;
-}
-
 @media (max-width: 925px) {
   .navbar__contact {
     display: none;

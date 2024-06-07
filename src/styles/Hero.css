@@ -1,12 +1,3 @@
-.hero--light {
-  color: #000;
-}
-
-.hero--dark {
-  /* color: #fff; */
-  color: #fff;
-}
-
 .hero {
   height: calc(100% - 5rem);
   width: 100%;

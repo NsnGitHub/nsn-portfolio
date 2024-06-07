@@ -1,0 +1,17 @@
+.project-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.project-actions {
+  margin-top: auto;
+}
+
+.project-actions > li:hover {
+  cursor: pointer;
+  scale: 1.25;
+}

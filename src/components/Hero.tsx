@@ -7,8 +7,7 @@ export default function Hero() {
 
   return (
     <>
-      \{" "}
-      <main className={`hero ${theme === "light" ? "hero--light" : "hero--dark"}`}>
+      <main className="hero">
         <h1>Hi there, I'm Anson.</h1>
         <p>
           Was once a business student aspiring to excel in accounting. But then decided to build cool and impactful

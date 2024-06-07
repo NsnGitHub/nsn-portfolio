@@ -5,7 +5,7 @@ export default function Reveal({ children }: { children: React.ReactNode }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.5 1.25"],
+    offset: ["0 1", "0.5 0.8"],
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);

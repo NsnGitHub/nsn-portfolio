@@ -25,3 +25,11 @@
   width: 50ch;
   line-height: 1.6;
 }
+
+.light {
+  color: #000;
+}
+
+.dark {
+  color: #fff;
+}
