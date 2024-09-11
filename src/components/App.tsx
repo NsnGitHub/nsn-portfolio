@@ -6,8 +6,6 @@ import Navbar from "./Navbar";
 import Project from "./Project";
 import Reveal from "./Reveal";
 
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-
 function App() {
   const { theme } = useThemeContext();
 
@@ -16,20 +14,12 @@ function App() {
       <LiquidBackgroundV2 />
       <Navbar />
       <Hero />
-
       <Reveal>
         <Project />
       </Reveal>
-
       <Reveal>
         <Project />
       </Reveal>
-
-      <Reveal>
-        <Project />
-      </Reveal>
-
-      <Reveal></Reveal>
     </div>
   );
 }
