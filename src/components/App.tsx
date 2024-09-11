@@ -6,6 +6,8 @@ import Navbar from "./Navbar";
 import Project from "./Project";
 import Reveal from "./Reveal";
 
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
 function App() {
   const { theme } = useThemeContext();
 
@@ -15,8 +17,6 @@ function App() {
       <Navbar />
       <Hero />
 
-      <div style={{ height: "25vh" }}></div>
-
       <Reveal>
         <Project />
       </Reveal>
@@ -28,6 +28,8 @@ function App() {
       <Reveal>
         <Project />
       </Reveal>
+
+      <Reveal></Reveal>
     </div>
   );
 }
