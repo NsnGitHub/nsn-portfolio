@@ -1,32 +1,37 @@
 import "../styles/project.css";
 import ProjectActions from "./ProjectActions";
 
-export default function Project() {
+type ImageDetails = {
+  src: string;
+  alt: string;
+};
+
+type ProjectProps = {
+  title: string;
+  techStackList: string[];
+  description: string;
+  image: ImageDetails | null;
+};
+
+export default function Project({ title, techStackList, description, image }: ProjectProps) {
   return (
     <>
       <div className="project">
-        <div className="project__info">
-          <h1>Title</h1>
+        <div className={image == null ? "project__info--no-img" : "project__info"}>
+          <h1>{title}</h1>
           <ul className="project__tech-list">
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>HTML</li>
-            <li>CSS</li>
+            {techStackList.map((techStack) => (
+              <li>{techStack}</li>
+            ))}
           </ul>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit cum distinctio asperiores, ex fuga ullam
-            blanditiis ipsam libero totam facilis, beatae eveniet doloribus nobis nihil aliquam possimus quidem
-            laudantium suscipit!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ex officiis reiciendis in labore tempora eum,
-            laudantium totam natus repudiandae commodi distinctio.
-          </p>
+          <div>{description}</div>
           <ProjectActions />
         </div>
-        <div className="project__img">
-          <img src="/nsn-dev.png" alt="test picture" />
-        </div>
+        {image != null ? (
+          <div className="project__img">
+            <img src={image?.src} alt={image?.alt} />
+          </div>
+        ) : null}
       </div>
     </>
   );
