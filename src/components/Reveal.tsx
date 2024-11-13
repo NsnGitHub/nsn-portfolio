@@ -13,7 +13,7 @@ export default function Reveal({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
       ref={ref}
-      style={{ opacity: opacityProgress, scale: scaleProgress }}
+      style={{ opacity: opacityProgress, scale: scaleProgress, width: "100%" }}
       initial={{ opacity: 0, scale: 0.8 }}
     >
       {children}

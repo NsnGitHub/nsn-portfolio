@@ -17,7 +17,12 @@ function App() {
       <Hero />
 
       <div className="app__container">
-        <div className="project__container">
+        <div className="project__container" id="projects">
+          <Reveal>
+            <h2 className="project__container__title">
+              <div className="line"></div>Personal Projects<div className="line"></div>
+            </h2>
+          </Reveal>
           <Reveal>
             <Project
               title="nsn-portfolio1"
@@ -43,6 +48,12 @@ function App() {
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
               image={{ src: "/nsn-dev.png", alt: "Test" }}
             />
+          </Reveal>
+
+          <Reveal>
+            <h2 className="project__container__title">
+              <div className="line"></div>Cool Group Projects<div className="line"></div>
+            </h2>
           </Reveal>
 
           <Carousel>

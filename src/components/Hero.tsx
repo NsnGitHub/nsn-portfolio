@@ -7,7 +7,7 @@ export default function Hero() {
 
   return (
     <>
-      <main className="hero">
+      <section className="hero" id="hero">
         <h1>Hi there, I'm Anson.</h1>
         <p>
           Was once a business student aspiring to excel in accounting. But then decided to build cool and impactful
@@ -18,7 +18,7 @@ export default function Hero() {
         <button className={`hero__button ${theme === "light" ? "hero__button--light" : "hero__button--dark"}`}>
           Check out my projects
         </button>
-      </main>
+      </section>
     </>
   );
 }

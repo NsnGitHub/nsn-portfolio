@@ -40,7 +40,7 @@
   justify-content: center;
   align-items: center;
 
-  gap: 15rem;
+  gap: 12rem;
 
   width: 70vw;
 }
@@ -53,4 +53,28 @@
   max-width: 100%;
   justify-content: center;
   align-items: center;
+}
+
+.project__container h2 {
+  font-size: 2.5rem;
+}
+
+.project__container__title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  text-wrap: nowrap;
+}
+
+.project__container__title .line {
+  height: 2px;
+  width: 100%;
+  background-color: currentColor;
+}
+
+@media (max-width: 1000px) {
+  .project__container {
+    width: 80vw;
+  }
 }

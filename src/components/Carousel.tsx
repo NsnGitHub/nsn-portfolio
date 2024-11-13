@@ -20,7 +20,12 @@ export default function Carousel({ children }: { children: React.ReactNode }) {
 
   return (
     <section className="carousel">
-      <ArrowLeftIcon height="3rem" width="3rem" onClick={prevProject}></ArrowLeftIcon>
+      <ArrowLeftIcon
+        height="3rem"
+        width="3rem"
+        onClick={prevProject}
+        className="carousel__controls--large"
+      ></ArrowLeftIcon>
 
       {React.Children.map(children, (child, index) => (
         <div className={index === current ? "slide--active" : "slide"} key={index}>
@@ -28,7 +33,17 @@ export default function Carousel({ children }: { children: React.ReactNode }) {
         </div>
       ))}
 
-      <ArrowRightIcon height="3rem" width="3rem" onClick={nextProject}></ArrowRightIcon>
+      <ArrowRightIcon
+        height="3rem"
+        width="3rem"
+        onClick={nextProject}
+        className="carousel__controls--large"
+      ></ArrowRightIcon>
+
+      <div className="carousel__controls--small">
+        <ArrowLeftIcon height="3rem" width="3rem" onClick={nextProject}></ArrowLeftIcon>
+        <ArrowRightIcon height="3rem" width="3rem" onClick={prevProject}></ArrowRightIcon>
+      </div>
     </section>
   );
 }
