@@ -1,6 +1,13 @@
 .carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 15rem;
+}
+
+.carousel__container {
   width: 100%;
-  height: 25vh;
 
   display: flex;
   flex-direction: row;
@@ -8,7 +15,7 @@
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 25vh;
+  margin-bottom: 3rem;
 }
 
 .slide {
@@ -21,6 +28,7 @@
 
   width: 100%;
   height: 100%;
+  min-height: 20rem;
 
   display: flex;
   align-items: flex-start;
@@ -29,7 +37,7 @@
   margin: 0rem 3rem;
 }
 
-.carousel__container {
+.carousel {
   display: flex;
   flex-direction: column;
 }
@@ -63,7 +71,7 @@
 }
 
 @media (max-width: 600px) {
-  .carousel {
+  .carousel__container {
     flex-direction: column;
     height: 50vh;
   }
@@ -73,6 +81,10 @@
   }
 
   .carousel__controls--small {
+    display: flex;
+  }
+
+  .carousel__pagination_dots {
     display: flex;
   }
 }
