@@ -9,7 +9,7 @@ type ImageDetails = {
 type ProjectProps = {
   title: string;
   techStackList: string[];
-  description: string;
+  description: string[];
   image: ImageDetails | null;
 };
 
@@ -24,7 +24,11 @@ export default function Project({ title, techStackList, description, image }: Pr
               <li>{techStack}</li>
             ))}
           </ul>
-          <div>{description}</div>
+          <div className="project__info--description">
+            {description.map((string) => (
+              <p>{string}</p>
+            ))}
+          </div>
           <ProjectActions />
         </div>
         {image != null ? (

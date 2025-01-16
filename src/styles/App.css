@@ -73,6 +73,12 @@
   background-color: currentColor;
 }
 
+.project__info--description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 @media (max-width: 1000px) {
   .project__container {
     width: 80vw;
