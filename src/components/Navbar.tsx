@@ -13,7 +13,7 @@ export default function Navbar() {
         <li className="navbar__projects">
           <a href="#projects">Projects</a>
         </li>
-        <li className="navbar__resume">Resume</li>
+        {/* <li className="navbar__resume">Resume</li> */}
         <li className="navbar__contact-settings">
           <span className="navbar__contact">
             <Contact />
