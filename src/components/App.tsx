@@ -23,31 +23,16 @@ function App() {
               <div className="line"></div>Personal Projects<div className="line"></div>
             </h2>
           </Reveal>
-          <Reveal>
-            <Project
-              title="nsn-portfolio"
-              techStackList={["React", "TypeScript", "HTML", "CSS"]}
-              description={[
-                "This website started as a mini-project to relearn JavaScript/TypeScript, and it was convenient that I still needed a personal portfolio website.",
-                "It showcases some features that I found cool on other websites, which I challenged myself to recreate it on my own. These include \
-                an animated logo in the top-left corner, smooth content revealing on scroll, and a dynamic liquid background (which can be seen better on dark mode!), \
-                and lastly a carousel to display other features at the bottom of the page.",
-              ]}
-              image={{ src: "/nsn-dev.png", alt: "Test" }}
-            />
-          </Reveal>
 
           <Reveal>
             <Project
-              title="nsn-updates-backend"
-              techStackList={["Java", "Spring", "Junit 5"]}
+              title="nsn-updates"
+              techStackList={["Java", "Spring", "Junit 5", "TypeScript", "React", "TailwindCSS"]}
               description={[
-                "nsn-updates is a minimal social media application inspired by X (formerly Twitter) as a way to relearn Java and explore frameworks \
-              like Spring Boot, Spring Security, and Spring Data JPA.",
-                "The platform enables users to create posts, follow users, and interact through likes and notifications. For authentication, \
-                the backend uses Spring Security with http-only cookies for managing auth and refresh tokens.",
-                "To ensure reliability, JUnit 5 and Testcontainers were used to perform integration tests after every update",
-                "The frontend is still a WIP, it's being built with React, TypeScript, and TailwindCSS.",
+                "This project is a full stack social media platform designed for simplicity and core social features. Users can post updates, follow others, like content, and manage their own posts.",
+                "The backend is built with Java and Spring Boot, exposing a RESTful API for client interactions. Key technologies inclide: PostgreSQL for persistent storage accessed via Hibernate and Spring Data JPA, JWT-based authentication implemented as a custom HTTP only filter using Spring Security, WebSocket integration for real-time notifications, A centralizated exception handling mechanism for consistent error responses, Comphresensive testing using SpringBootTest and TestContainers.",
+                "The frontend is built with TypeScript, React, and TailwindCSS, delivering a modern user experience.",
+                "This project gave me hands-on experience building out a web application, as a solo developer it allowed me to explore any technology or feature I wanted to. Most importantly, it highlighted the importance of system design and planning, as I spent a lot of time regretting certain design choices that I made in the past.",
               ]}
               image={{ src: "/nsn-dev.png", alt: "Test" }}
             />
@@ -55,30 +40,31 @@ function App() {
 
           <Reveal>
             <h2 className="project__container__title">
-              <div className="line"></div>Cool Group Projects<div className="line"></div>
+              <div className="line"></div>Some Cool Group Projects<div className="line"></div>
             </h2>
           </Reveal>
 
           <Carousel>
             <Project
-              title="Autonomous Driving Jetson Nano"
-              techStackList={["Python", "PyTorch"]}
+              title="Embedded Plant Caretaker"
+              techStackList={["C", "Python"]}
               description={[
-                "Final project an AI course at BCIT. This project involved aspects of computer vision and a convolutional neural network deployed onto a NVDIA Jetson Nano with a SparkFun Robot Kit to make it move along \
-                a white line and stop for a set amount of seconds when it detects a stop sign.",
-                "If you want to learn more about this project, I linked the Google Slides presentation, so click on the globe icon below.",
+                "This project focused on building an automated plant care system using embedded technologies.",
+                "The system was powered by a BeagleBone Green and had many sensors integrated, including an RHT03 temperature and humidity sensor, a STEMMA soil moisture sensor, and a water pump for irragation.",
+                "Data was collected via I2C by a dedicated sampling thread and then transmitted to a web server using UDP.",
+                "The web interface allowed users to set custom thresholds for temperature, humidity, and soil moisture levels. Another communication thread monitored these thresholds and activated the water pump when necessary, enabling remote plant care automation.",
               ]}
               image={{ src: "/nsn-dev.png", alt: "Test" }}
             />
             <Project
-              title="Embedded Plant Caretaker"
-              techStackList={["C", "Python"]}
+              title="Autonomous Driving Jetson Nano"
+              techStackList={["Python", "PyTorch"]}
               description={[
-                "Semester project for an embedded development course. The goal of this project was to have an embedded system that can take care of any plant. \
-                It involved a BeagleBone Green, an RHT03 temperature and humidity sensor, a STEMMA soil sensor, and a water pump",
-                "The data from both sensors were retrieved via i2c by a sampling thread, this data is then sent to the web server through UDP to display. On the web server, \
-                thresholds can be set for when the water pump will activate, this was accomplished by another thread that handles the communication between the BeagleBone and \
-                the web server.",
+                "As part of a final project for an Artificial Intillegence course at BCIT, I developed an autonomous driving system deployed on an NVIDIA Jetson Nano and a SparkFun robot kit equipped with a camera and motorized wheels.",
+                "The goal was to enable the robot to nagivate a track autonomously while obeying any stop signs through computer vision coupled with deep learning.",
+                "The navigation was implemented using OpenCV to track a line on the ground. The camera feed was processed using grayscale conversion, Gaussian blur, colour thresholding, and contour detection. To reduce computational load, I reduced the image capture rate to 10 FPS, and only used a cropped lower portion of the image, allowing the robot to focus on the most relevant part of its path.",
+                "I ended up using AlexCNN over a self-developed TensorFlow-based model, to improve prediction accuracy.",
+                "The end result was a robot able to navigate a circuit while stopping at every stop sign, and I received 95% in the course.",
               ]}
               image={{ src: "/nsn-dev.png", alt: "Test" }}
             />
