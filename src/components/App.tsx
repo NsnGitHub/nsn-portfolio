@@ -38,6 +38,7 @@ function App() {
                 "This project gave me hands-on experience building out a web application, as a solo developer it allowed me to explore any technology or feature I wanted to. Most importantly, it highlighted the importance of system design and planning, as I spent a lot of time regretting certain design choices that I made in the past.",
               ]}
               image={{ src: nsnUpdates, alt: "Test" }}
+              githubLink="https://github.com/NsnGitHub/nsn-updates-backend"
             />
           </Reveal>
 
@@ -58,6 +59,7 @@ function App() {
                 "The web interface allowed users to set custom thresholds for temperature, humidity, and soil moisture levels. Another communication thread monitored these thresholds and activated the water pump when necessary, enabling remote plant care automation.",
               ]}
               image={{ src: embeddedPlantCaretaker, alt: "Test" }}
+              githubLink=""
             />
             <Project
               title="Autonomous Driving Jetson Nano"
@@ -70,6 +72,7 @@ function App() {
                 "The end result was a robot able to navigate a circuit while stopping at every stop sign, and I received 95% in the course.",
               ]}
               image={{ src: autonomousDrivingJetsonNano, alt: "Test" }}
+              githubLink=""
             />
           </Carousel>
         </div>

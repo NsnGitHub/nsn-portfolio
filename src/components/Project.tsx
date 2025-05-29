@@ -11,9 +11,10 @@ type ProjectProps = {
   techStackList: string[];
   description: string[];
   image: ImageDetails | null;
+  githubLink: string;
 };
 
-export default function Project({ title, techStackList, description, image }: ProjectProps) {
+export default function Project({ title, techStackList, description, image, githubLink }: ProjectProps) {
   return (
     <>
       <div className="project">
@@ -29,7 +30,7 @@ export default function Project({ title, techStackList, description, image }: Pr
               <p>{string}</p>
             ))}
           </div>
-          <ProjectActions />
+          <ProjectActions link={githubLink} />
         </div>
         {image != null ? (
           <div className="project__img">
