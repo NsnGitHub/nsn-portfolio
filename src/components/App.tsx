@@ -6,6 +6,9 @@ import LiquidBackgroundV2 from "./LiquidBackground-v2";
 import Navbar from "./Navbar";
 import Project from "./Project";
 import Reveal from "./Reveal";
+import embeddedPlantCaretaker from "../images/EmbeddedPlantCaretaker.jpeg";
+import autonomousDrivingJetsonNano from "../images/AutonomousDrivingJetsonNano.jpeg";
+import nsnUpdates from "../images/nsn-updates.png";
 
 function App() {
   const { theme } = useThemeContext();
@@ -31,10 +34,10 @@ function App() {
               description={[
                 "This project is a full stack social media platform designed for simplicity and core social features. Users can post updates, follow others, like content, and manage their own posts.",
                 "The backend is built with Java and Spring Boot, exposing a RESTful API for client interactions. Key technologies inclide: PostgreSQL for persistent storage accessed via Hibernate and Spring Data JPA, JWT-based authentication implemented as a custom HTTP only filter using Spring Security, WebSocket integration for real-time notifications, A centralizated exception handling mechanism for consistent error responses, Comphresensive testing using SpringBootTest and TestContainers.",
-                "The frontend is built with TypeScript, React, and TailwindCSS, delivering a modern user experience.",
+                "The frontend is built with TypeScript, React, and TailwindCSS, delivering a smooth user experience (WIP).",
                 "This project gave me hands-on experience building out a web application, as a solo developer it allowed me to explore any technology or feature I wanted to. Most importantly, it highlighted the importance of system design and planning, as I spent a lot of time regretting certain design choices that I made in the past.",
               ]}
-              image={{ src: "/nsn-dev.png", alt: "Test" }}
+              image={{ src: nsnUpdates, alt: "Test" }}
             />
           </Reveal>
 
@@ -54,7 +57,7 @@ function App() {
                 "Data was collected via I2C by a dedicated sampling thread and then transmitted to a web server using UDP.",
                 "The web interface allowed users to set custom thresholds for temperature, humidity, and soil moisture levels. Another communication thread monitored these thresholds and activated the water pump when necessary, enabling remote plant care automation.",
               ]}
-              image={{ src: "/nsn-dev.png", alt: "Test" }}
+              image={{ src: embeddedPlantCaretaker, alt: "Test" }}
             />
             <Project
               title="Autonomous Driving Jetson Nano"
@@ -66,7 +69,7 @@ function App() {
                 "I ended up using AlexCNN over a self-developed TensorFlow-based model, to improve prediction accuracy.",
                 "The end result was a robot able to navigate a circuit while stopping at every stop sign, and I received 95% in the course.",
               ]}
-              image={{ src: "/nsn-dev.png", alt: "Test" }}
+              image={{ src: autonomousDrivingJetsonNano, alt: "Test" }}
             />
           </Carousel>
         </div>
