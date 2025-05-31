@@ -30,7 +30,15 @@ function App() {
           <Reveal>
             <Project
               title="nsn-updates"
-              techStackList={["Java", "Spring", "Junit 5", "TypeScript", "React", "TailwindCSS"]}
+              techStackList={[
+                "Java",
+                "Spring Framework",
+                "Spring Boot",
+                "Junit 5",
+                "TypeScript",
+                "React",
+                "TailwindCSS",
+              ]}
               description={[
                 "This project is a full stack social media platform designed for simplicity and core social features. Users can post updates, follow others, like content, and manage their own posts.",
                 "The backend is built with Java and Spring Boot, exposing a RESTful API for client interactions. Key technologies inclide: PostgreSQL for persistent storage accessed via Hibernate and Spring Data JPA, JWT-based authentication implemented as a custom HTTP only filter using Spring Security, WebSocket integration for real-time notifications, A centralizated exception handling mechanism for consistent error responses, Comphresensive testing using SpringBootTest and TestContainers.",
