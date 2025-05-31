@@ -50,7 +50,7 @@ export default function Carousel({ children }: { children: React.ReactNode }) {
       <div className="carousel__pagination_dots">
         {Array(length)
           .fill(null)
-          .map((index) => (index == current ? <DotFilledIcon /> : <DotIcon />))}
+          .map((_, index) => (index == current ? <DotFilledIcon /> : <DotIcon />))}
       </div>
     </section>
   );
