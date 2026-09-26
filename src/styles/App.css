@@ -34,6 +34,10 @@
   color: #fff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .project__container {
   display: flex;
   flex-direction: column;

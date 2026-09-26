@@ -15,7 +15,10 @@ export default function Hero() {
           University.
         </p>
         <Contact />
-        <button className={`hero__button ${theme === "light" ? "hero__button--light" : "hero__button--dark"}`}>
+        <button
+          className={`hero__button ${theme === "light" ? "hero__button--light" : "hero__button--dark"}`}
+          onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+        >
           Check out my projects
         </button>
       </section>
