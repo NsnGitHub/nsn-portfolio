@@ -68,12 +68,12 @@ html {
   align-items: center;
   gap: 1rem;
   width: 100%;
-  text-wrap: nowrap;
+  text-wrap: auto;
 }
 
 .project__container__title .line {
   height: 2px;
-  width: 100%;
+  flex: 1 1 0%;
   background-color: currentColor;
 }
 
@@ -86,5 +86,11 @@ html {
 @media (max-width: 1000px) {
   .project__container {
     width: 80vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .project__container__title {
+    gap: 0;
   }
 }

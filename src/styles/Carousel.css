@@ -75,7 +75,7 @@
 @media (max-width: 600px) {
   .carousel__container {
     flex-direction: column;
-    height: 50vh;
+    height: fit-content;
   }
 
   .carousel__controls--large {
